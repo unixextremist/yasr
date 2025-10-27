@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yasr</title>
+    <link rel="stylesheet" href="styles.css">
+<base target="_blank">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>yasr</h1>
+            <button id="theme-toggle" class="theme-btn">theme</button>
+        </header>
+
+        <main>
+            <div class="controls">
+                <div class="control-row">
+                    <label>quality:</label>
+                    <select id="quality-select">
+                        <option value="high">1080p</option>
+                        <option value="medium" selected>720p</option>
+                        <option value="low">480p</option>
+                    </select>
+                </div>
+
+                <div class="control-row">
+                    <label>bitrate:</label>
+                    <select id="bitrate-select">
+                        <option value="1000">1000 kbps</option>
+                        <option value="2500" selected>2500 kbps</option>
+                        <option value="5000">5000 kbps</option>
+                        <option value="8000">8000 kbps</option>
+                    </select>
+                </div>
+
+                <div class="control-row">
+                    <label>format:</label>
+                    <select id="format-select">
+                        <option value="webm" selected>webm</option>
+                        <option value="mp4">mp4</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="recording-section">
+                <div class="status" id="status">ready</div>
+                
+                <div class="buttons">
+                    <button id="start-btn" class="btn">start</button>
+                    <button id="stop-btn" class="btn" disabled>stop</button>
+                </div>
+
+                <div class="info">
+                    <span id="duration">00:00</span>
+                    <span id="size">0mb</span>
+                </div>
+            </div>
+
+            <video id="preview" controls style="display: none;"></video>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
